@@ -91,6 +91,8 @@ public class CheckOutActivity extends AppCompatActivity {
                             + " " + add_js.optString("address"));
                     mPhoneNumber.setText("  "
                             + add_js.getString("mob_phone"));
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -161,9 +163,34 @@ public class CheckOutActivity extends AppCompatActivity {
         mCheckSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 点击提交订单
+                loadOnlineBuyStep2Data();
                 zhifuboPay();
             }
         });
+    }
+
+    private void loadOnlineBuyStep2Data() {
+
+//        FormBody.Builder builder = new FormBody.Builder();
+//        builder.add("key", key);
+//        builder.add("cart_id", mCart_id);     // 商品的 id 和 数量
+//        builder.add("ifcart", mIfcart);
+//        builder.add("address_id", address_id);
+//        builder.add("vat_hash", vat_hash);
+//        builder.add("offpay_hash", offpay_hash);
+//        builder.add("offpay_hash_batch", offpay_hash_batch);
+//        builder.add("pay_name", "online");
+//        builder.add("invoice_id", invoice_id);
+//        builder.add("voucher", voucher);
+//        builder.add("pd_pay", available[1]);
+//        builder.add("rcb_pay", available[0]);
+//        builder.add("password", "");
+//        builder.add("fcode", "");
+//        Request request = new Request.Builder().url("http://shop.trqq.com/mobile/index.php?act=member_buy&op=buy_step1").post(builder.build()).build();
+//        Call call = mClient.newCall(request);
+//
+
     }
 
     private void loadOnlineBuyStep1Data(){
