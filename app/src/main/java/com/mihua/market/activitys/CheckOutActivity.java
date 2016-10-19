@@ -91,8 +91,6 @@ public class CheckOutActivity extends AppCompatActivity {
                             + " " + add_js.optString("address"));
                     mPhoneNumber.setText("  "
                             + add_js.getString("mob_phone"));
-
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
